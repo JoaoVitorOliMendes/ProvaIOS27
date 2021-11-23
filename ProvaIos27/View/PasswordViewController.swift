@@ -30,7 +30,9 @@ class PasswordViewController: UIViewController {
             Auth.auth().sendPasswordReset(withEmail: email!, completion: {
                 error in
                 if error != nil {
-                    print(error)
+                    let alert = UIAlertController(title: "Alerta", message: error!.localizedDescription, preferredStyle: UIAlertController.Style.alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
+                    self.present(alert, animated: true, completion: nil);
                 }else {
                     self.txtEmail.text = "";
                 }

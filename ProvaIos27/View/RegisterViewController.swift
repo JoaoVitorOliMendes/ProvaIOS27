@@ -37,13 +37,17 @@ class RegisterViewController: UIViewController {
             Auth.auth().createUser(withEmail: email!, password: senha!, completion: {
                 authResult, error in
                 if error != nil {
-                    print(error);
+                    let alert = UIAlertController(title: "Alerta", message: error!.localizedDescription, preferredStyle: UIAlertController.Style.alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
+                    self.present(alert, animated: true, completion: nil);
                 }else {
                     Auth.auth().signIn(withEmail: email!, password: senha!, completion: {
                         authResult, error in
                         
                         if error != nil {
-                            print(error);
+                            let alert = UIAlertController(title: "Alerta", message: error!.localizedDescription, preferredStyle: UIAlertController.Style.alert);
+                            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
+                            self.present(alert, animated: true, completion: nil);
                         }else {
                             self.performSegue(withIdentifier: "registerToHome", sender: nil);
                         }

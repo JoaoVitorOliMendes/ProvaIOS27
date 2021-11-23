@@ -36,9 +36,17 @@ class TableViewViewController: UIViewController {
                     self.arrayNotas.append(aluno)
                     self.tableView.reloadData()
                 }catch let error2 {
-                    print(error2)
+                    if error2 != nil {
+                        let alert = UIAlertController(title: "Alerta", message: error2.localizedDescription, preferredStyle: UIAlertController.Style.alert);
+                        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
+                        self.present(alert, animated: true, completion: nil);
+                    }
                 }
-                print(error)
+                if error != nil {
+                    let alert = UIAlertController(title: "Alerta", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil));
+                    self.present(alert, animated: true, completion: nil);
+                }
             }
         })
     }
