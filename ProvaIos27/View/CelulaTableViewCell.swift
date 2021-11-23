@@ -1,16 +1,16 @@
 //
-//  AlunosTableViewCell.swift
+//  CelulaTableViewCell.swift
 //  ProvaIos27
 //
-//  Created by COTEMIG on 13/03/38 ERA1.
+//  Created by COTEMIG on 14/03/38 ERA1.
 //
 
 import UIKit
 
-class AlunosTableViewCell: UITableViewCell {
+class CelulaTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var txtAluno: UILabel!
-    @IBOutlet weak var txtNota: UILabel!
+    @IBOutlet weak var lblAluno: UILabel!
+    @IBOutlet weak var lblNota: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

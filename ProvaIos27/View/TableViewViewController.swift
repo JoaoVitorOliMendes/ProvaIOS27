@@ -17,33 +17,26 @@ class TableViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        self.tableView.dataSource = self
         
         let ref = Database.database().reference()
         let id = Auth.auth().currentUser?.uid
         
         ref.child("Aluno").child(id!).observe(.value, with: {
             snapshot in
-            guard let value: [String: [String: String]] = snapshot.value as! [String: [String: String]] else { return }
-            print(value.values)
+            guard let value: [String: [String: String]] = snapshot.value as? [String: [String: String]] else { return }
             do {
-                let aluno = try FirebaseDecoder().decode([String: notas].self, from: value)
-                print(aluno)
-                aluno.map({
-                    val -> notas in
-                    return val.value
-                })
-                print("///////////////////")
-                self.arrayNotas = try FirebaseDecoder().decode([String: notas].self, from: value)
+                let array = Array(value.values)
+                self.arrayNotas = try FirebaseDecoder().decode([notas].self, from: array)
                 self.tableView.reloadData()
             } catch let error {
                 do {
-                    let aluno = try FirebaseDecoder().decode(notas.self, from: value)
+                    let array = Array(value.values)
+                    let aluno = try FirebaseDecoder().decode(notas.self, from: array)
                     self.arrayNotas.append(aluno)
                     self.tableView.reloadData()
                 }catch let error2 {
                     print(error2)
-                    print("-------------------------------------")
                 }
                 print(error)
             }
@@ -80,10 +73,10 @@ extension TableViewViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! AlunosTableViewCell
         let aluno = arrayNotas[indexPath.row]
-        celula.txtNota.text = aluno.nota
-        celula.txtAluno.text = aluno.nome
+        let celula = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! CelulaTableViewCell
+        celula.lblAluno.text = aluno.nome
+        celula.lblNota.text = aluno.nota
         return celula
     }
     

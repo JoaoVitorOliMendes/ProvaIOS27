@@ -20,10 +20,11 @@
 		DCA860E1274C06FE00F82C38 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA860E0274C06FE00F82C38 /* GoogleService-Info.plist */; };
 		DCA860E4274C0A9B00F82C38 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA860E3274C0A9B00F82C38 /* PasswordViewController.swift */; };
 		DCA860E7274C0EF500F82C38 /* TableViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA860E6274C0EF500F82C38 /* TableViewViewController.swift */; };
-		DCA860EE274C0FA100F82C38 /* AlunosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA860ED274C0FA100F82C38 /* AlunosTableViewCell.swift */; };
 		DCA860F6274C113500F82C38 /* notas.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA860F5274C113500F82C38 /* notas.swift */; };
 		DCA860F9274C163E00F82C38 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA860F8274C163E00F82C38 /* AddViewController.swift */; };
 		DCA860FD274C28B900F82C38 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = DCA860FC274C28B900F82C38 /* CodableFirebase */; };
+		DCA86102274CFD5F00F82C38 /* CelulaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA86101274CFD5F00F82C38 /* CelulaTableViewCell.swift */; };
+		DCA86105274D046600F82C38 /* errorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA86104274D046600F82C38 /* errorEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,9 +41,10 @@
 		DCA860E0274C06FE00F82C38 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCA860E3274C0A9B00F82C38 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
 		DCA860E6274C0EF500F82C38 /* TableViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewViewController.swift; sourceTree = "<group>"; };
-		DCA860ED274C0FA100F82C38 /* AlunosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunosTableViewCell.swift; sourceTree = "<group>"; };
 		DCA860F5274C113500F82C38 /* notas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notas.swift; sourceTree = "<group>"; };
 		DCA860F8274C163E00F82C38 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		DCA86101274CFD5F00F82C38 /* CelulaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelulaTableViewCell.swift; sourceTree = "<group>"; };
+		DCA86104274D046600F82C38 /* errorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = errorEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +101,8 @@
 				DCA860D9274BFD1300F82C38 /* RegisterViewController.swift */,
 				DCA860E3274C0A9B00F82C38 /* PasswordViewController.swift */,
 				DCA860E6274C0EF500F82C38 /* TableViewViewController.swift */,
-				DCA860ED274C0FA100F82C38 /* AlunosTableViewCell.swift */,
 				DCA860F8274C163E00F82C38 /* AddViewController.swift */,
+				DCA86101274CFD5F00F82C38 /* CelulaTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DCA860F5274C113500F82C38 /* notas.swift */,
+				DCA86104274D046600F82C38 /* errorEnum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,12 +200,13 @@
 				DCA860BC274BF42200F82C38 /* ViewController.swift in Sources */,
 				DCA860E4274C0A9B00F82C38 /* PasswordViewController.swift in Sources */,
 				DCA860F9274C163E00F82C38 /* AddViewController.swift in Sources */,
+				DCA86105274D046600F82C38 /* errorEnum.swift in Sources */,
 				DCA860B8274BF42200F82C38 /* AppDelegate.swift in Sources */,
 				DCA860F6274C113500F82C38 /* notas.swift in Sources */,
 				DCA860BA274BF42200F82C38 /* SceneDelegate.swift in Sources */,
 				DCA860E7274C0EF500F82C38 /* TableViewViewController.swift in Sources */,
+				DCA86102274CFD5F00F82C38 /* CelulaTableViewCell.swift in Sources */,
 				DCA860DA274BFD1300F82C38 /* RegisterViewController.swift in Sources */,
-				DCA860EE274C0FA100F82C38 /* AlunosTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

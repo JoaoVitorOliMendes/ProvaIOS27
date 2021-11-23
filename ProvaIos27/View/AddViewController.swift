@@ -31,11 +31,11 @@ class AddViewController: UIViewController {
         }else {
             let ref = Database.database().reference()
             let id = Auth.auth().currentUser?.uid
-            let id2 = ref.child("Aluno").childByAutoId().key ?? ""
+            let id2 = ref.child("Aluno").child(id!).childByAutoId().key ?? ""
             
             let alunoNota = notas(
                 nome: aluno!,
-                id: id!,
+                id: id2,
                 nota: nota!
             )
             
